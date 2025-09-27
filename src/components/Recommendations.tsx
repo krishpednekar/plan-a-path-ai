@@ -20,7 +20,7 @@ const mockRecommendations: Recommendation[] = [
   {
     id: 1,
     title: "Netarhat Hill Station",
-    description: "Perfect for sunrise views and trekking. Known as the 'Queen of Chotanagpur', this hill station offers breathtaking panoramic views.",
+    description: "Perfect for sunrise views and trekking. Known as the 'Queen of Chotanagpur', this hill station offers breathtaking panoramic views and cool mountain air.",
     category: "nature",
     rating: 4.8,
     duration: "2-3 days",
@@ -30,7 +30,7 @@ const mockRecommendations: Recommendation[] = [
   {
     id: 2,
     title: "Betla National Park", 
-    description: "Wildlife safari and elephant rides. Home to tigers, elephants, and diverse flora & fauna in the heart of Jharkhand.",
+    description: "Wildlife safari and elephant rides. Home to tigers, elephants, and diverse flora & fauna in the heart of Jharkhand. Perfect for wildlife photography and nature walks.",
     category: "wildlife",
     rating: 4.6,
     duration: "1-2 days",
@@ -40,7 +40,7 @@ const mockRecommendations: Recommendation[] = [
   {
     id: 3,
     title: "Hundru Falls",
-    description: "Monsoon photography and adventure activities. A spectacular 320-foot waterfall that's perfect for nature lovers.",
+    description: "Monsoon photography and adventure activities. A spectacular 320-foot waterfall that's perfect for nature lovers and adventure seekers looking for trekking and rappelling.",
     category: "adventure",
     rating: 4.7,
     duration: "Half day",
@@ -50,7 +50,7 @@ const mockRecommendations: Recommendation[] = [
   {
     id: 4,
     title: "Dassam Falls",
-    description: "Scenic waterfall with natural pools for swimming. A hidden gem surrounded by dense forests and rocky terrain.",
+    description: "Scenic waterfall with natural pools for swimming. A hidden gem surrounded by dense forests and rocky terrain, ideal for picnics and nature photography.",
     category: "nature",
     rating: 4.5,
     duration: "Half day",
@@ -60,7 +60,7 @@ const mockRecommendations: Recommendation[] = [
   {
     id: 5,
     title: "Jagannath Temple Ranchi",
-    description: "Ancient temple with rich cultural heritage. A replica of the famous Puri Jagannath Temple with stunning architecture.",
+    description: "Ancient temple with rich cultural heritage. A replica of the famous Puri Jagannath Temple with stunning architecture and peaceful spiritual atmosphere.",
     category: "heritage",
     rating: 4.9,
     duration: "2-3 hours",
@@ -70,12 +70,42 @@ const mockRecommendations: Recommendation[] = [
   {
     id: 6,
     title: "Patratu Valley",
-    description: "Valley of valleys with dam views and boating. Often called the 'Kashmir of Jharkhand' for its scenic beauty.",
+    description: "Valley of valleys with dam views and boating. Often called the 'Kashmir of Jharkhand' for its scenic beauty, perfect for romantic getaways and photography.",
     category: "nature",
     rating: 4.4,
     duration: "1 day",
     visitors: "900/month",
     image: "🏞️"
+  },
+  {
+    id: 7,
+    title: "Kerala Backwaters",
+    description: "Serene houseboat cruises through palm-fringed canals. Experience the unique ecosystem of Kerala's backwaters with traditional hospitality and ayurvedic treatments.",
+    category: "nature",
+    rating: 4.9,
+    duration: "3-5 days",
+    visitors: "5k/month",
+    image: "🛶"
+  },
+  {
+    id: 8,
+    title: "Goa Beaches",
+    description: "Golden sandy beaches with vibrant culture. Perfect blend of Portuguese architecture, beach activities, water sports, and famous nightlife scene.",
+    category: "beach",
+    rating: 4.5,
+    duration: "4-7 days", 
+    visitors: "15k/month",
+    image: "🏖️"
+  },
+  {
+    id: 9,
+    title: "Rajasthan Palaces",
+    description: "Majestic forts and royal heritage. Explore the land of kings with stunning Rajput architecture, desert safaris, and rich cultural traditions.",
+    category: "heritage",
+    rating: 4.8,
+    duration: "5-10 days",
+    visitors: "8k/month",
+    image: "🏰"
   }
 ];
 
@@ -83,7 +113,8 @@ const categoryColors = {
   nature: "bg-green-100 text-green-800 border-green-200",
   wildlife: "bg-orange-100 text-orange-800 border-orange-200", 
   adventure: "bg-red-100 text-red-800 border-red-200",
-  heritage: "bg-purple-100 text-purple-800 border-purple-200"
+  heritage: "bg-purple-100 text-purple-800 border-purple-200",
+  beach: "bg-blue-100 text-blue-800 border-blue-200"
 };
 
 export function Recommendations() {
@@ -100,7 +131,7 @@ export function Recommendations() {
       setLoading(false);
       toast({
         title: "AI Recommendations Generated!",
-        description: "Found 6 amazing destinations tailored for you.",
+        description: "Found 9 amazing destinations tailored for you.",
       });
     }, 1500);
   };

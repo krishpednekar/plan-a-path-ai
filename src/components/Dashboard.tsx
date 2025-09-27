@@ -13,6 +13,7 @@ import {
   TrendingUp,
   Users
 } from "lucide-react";
+import tourismHero from "@/assets/tourism-hero.jpg";
 
 interface DashboardProps {
   onNavigate: (tab: string) => void;
@@ -74,18 +75,33 @@ const travelAlerts = [
 export function Dashboard({ onNavigate }: DashboardProps) {
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold text-foreground">Welcome to TourismAI</h1>
-          <p className="text-muted-foreground mt-1">
-            Discover amazing destinations with AI-powered travel assistance
+      {/* Welcome Section with Hero Image */}
+      <div className="relative bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-8 text-center overflow-hidden">
+        <div 
+          className="absolute inset-0 opacity-20 bg-cover bg-center rounded-xl"
+          style={{ backgroundImage: `url(${tourismHero})` }}
+        />
+        <div className="relative z-10">
+          <h1 className="text-4xl font-bold text-foreground mb-3">
+            Welcome to TourismAI
+          </h1>
+          <p className="text-lg text-muted-foreground mb-6">
+            Your intelligent travel companion for discovering amazing destinations
           </p>
-        </div>
-        <div className="flex items-center space-x-4">
-          <Badge variant="secondary" className="flex items-center space-x-2">
+          <div className="flex flex-wrap gap-2 justify-center mb-4">
+            <Badge variant="secondary" className="bg-primary/20">
+              AI-Powered Recommendations
+            </Badge>
+            <Badge variant="secondary" className="bg-secondary/20">
+              Smart Itinerary Planning
+            </Badge>
+            <Badge variant="secondary" className="bg-accent/20">
+              Multilingual Support
+            </Badge>
+          </div>
+          <Badge variant="secondary" className="flex items-center space-x-2 w-fit mx-auto">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span>AI Online</span>
+            <span>AI Online & Ready</span>
           </Badge>
         </div>
       </div>
