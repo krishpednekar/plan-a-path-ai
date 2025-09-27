@@ -19,6 +19,15 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        /* Tourism Brand Colors */
+        "ocean-blue": "hsl(var(--ocean-blue))",
+        "sunset-orange": "hsl(var(--sunset-orange))",
+        "forest-green": "hsl(var(--forest-green))",
+        "mountain-purple": "hsl(var(--mountain-purple))",
+        "sky-light": "hsl(var(--sky-light))",
+        "earth-brown": "hsl(var(--earth-brown))",
+        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

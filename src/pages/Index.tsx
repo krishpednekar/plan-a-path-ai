@@ -1,13 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React, { useState } from "react";
+import { TourismLayout } from "@/components/TourismLayout";
+import { Dashboard } from "@/components/Dashboard";
+import { Recommendations } from "@/components/Recommendations";
+import { InteractiveMap } from "@/components/InteractiveMap";
+import { ItineraryPlanner } from "@/components/ItineraryPlanner";
+import { MultilingualChat } from "@/components/MultilinguaChat";
+import { PaymentSection } from "@/components/PaymentSection";
+import { AboutSection } from "@/components/AboutSection";
 
 const Index = () => {
+  const [activeTab, setActiveTab] = useState("dashboard");
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "dashboard":
+        return <Dashboard onNavigate={setActiveTab} />;
+      case "recommendations":
+        return <Recommendations />;
+      case "map":
+        return <InteractiveMap />;
+      case "itinerary":
+        return <ItineraryPlanner />;
+      case "chat":
+        return <MultilingualChat />;
+      case "payments":
+        return <PaymentSection />;
+      case "about":
+        return <AboutSection />;
+      default:
+        return <Dashboard onNavigate={setActiveTab} />;
+    }
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <TourismLayout activeTab={activeTab} onTabChange={setActiveTab}>
+      {renderContent()}
+    </TourismLayout>
   );
 };
 
