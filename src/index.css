@@ -46,10 +46,12 @@
     --radius: 0.75rem;
     
     /* Tourism Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 85% 45%) 0%, hsl(270 50% 40%) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 60%) 0%, hsl(0 75% 55%) 100%);
-    --gradient-nature: linear-gradient(135deg, hsl(120 40% 35%) 0%, hsl(200 60% 85%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 85% 45%) 0%, hsl(25 95% 60%) 50%, hsl(270 50% 40%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(210 85% 55%) 0%, hsl(270 60% 50%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 65%) 0%, hsl(350 85% 60%) 100%);
+    --gradient-nature: linear-gradient(135deg, hsl(120 50% 45%) 0%, hsl(200 70% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 85% 55%) 0%, hsl(25 95% 65%) 30%, hsl(350 85% 60%) 70%, hsl(270 60% 50%) 100%);
+    --gradient-ocean: linear-gradient(135deg, hsl(200 85% 60%) 0%, hsl(210 90% 45%) 100%);
+    --gradient-mountain: linear-gradient(135deg, hsl(270 60% 50%) 0%, hsl(280 70% 60%) 100%);
     
     /* Sidebar */
     --sidebar-background: 210 20% 96%;
@@ -132,6 +134,14 @@
   
   .gradient-hero {
     background: var(--gradient-hero);
+  }
+  
+  .gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+  
+  .gradient-mountain {
+    background: var(--gradient-mountain);
   }
   
   .shadow-card {

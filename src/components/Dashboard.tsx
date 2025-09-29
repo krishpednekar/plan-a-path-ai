@@ -33,7 +33,7 @@ const featureCards = [
     title: "Interactive Map", 
     description: "Explore locations visually",
     icon: MapPin,
-    gradient: "gradient-nature",
+    gradient: "gradient-ocean",
     stats: "Live tracking"
   },
   {
@@ -49,7 +49,7 @@ const featureCards = [
     title: "Secure Payments",
     description: "Blockchain-powered transactions",
     icon: CreditCard,
-    gradient: "gradient-primary",
+    gradient: "gradient-mountain",
     stats: "Safe & fast"
   }
 ];
@@ -76,31 +76,32 @@ export function Dashboard({ onNavigate }: DashboardProps) {
   return (
     <div className="space-y-6">
       {/* Welcome Section with Hero Image */}
-      <div className="relative bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-8 text-center overflow-hidden">
+      <div className="relative gradient-hero rounded-xl p-8 text-center overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-20 bg-cover bg-center rounded-xl"
+          className="absolute inset-0 opacity-40 bg-cover bg-center rounded-xl"
           style={{ backgroundImage: `url(${tourismHero})` }}
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/30 rounded-xl" />
         <div className="relative z-10">
-          <h1 className="text-4xl font-bold text-foreground mb-3">
+          <h1 className="text-4xl font-bold text-white drop-shadow-lg mb-3">
             Welcome to TourismAI
           </h1>
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-lg text-white/90 drop-shadow-md mb-6">
             Your intelligent travel companion for discovering amazing destinations
           </p>
           <div className="flex flex-wrap gap-2 justify-center mb-4">
-            <Badge variant="secondary" className="bg-primary/20">
+            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
               AI-Powered Recommendations
             </Badge>
-            <Badge variant="secondary" className="bg-secondary/20">
+            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
               Smart Itinerary Planning
             </Badge>
-            <Badge variant="secondary" className="bg-accent/20">
+            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
               Multilingual Support
             </Badge>
           </div>
-          <Badge variant="secondary" className="flex items-center space-x-2 w-fit mx-auto">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <Badge className="flex items-center space-x-2 w-fit mx-auto bg-green-500/20 text-white border-green-400/30 backdrop-blur-sm">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             <span>AI Online & Ready</span>
           </Badge>
         </div>
@@ -113,10 +114,10 @@ export function Dashboard({ onNavigate }: DashboardProps) {
           return (
             <Card 
               key={card.id}
-              className="relative overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-hover group"
+              className="relative overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-hover hover:scale-105 group border-2 border-transparent hover:border-primary/20"
               onClick={() => onNavigate(card.id)}
             >
-              <div className={cn("absolute inset-0 opacity-10", card.gradient)} />
+              <div className={cn("absolute inset-0 opacity-15", card.gradient)} />
               <CardHeader className="relative">
                 <div className="flex items-center justify-between">
                   <Icon className="h-8 w-8 text-primary" />
