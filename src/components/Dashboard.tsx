@@ -22,52 +22,52 @@ interface DashboardProps {
 const featureCards = [
   {
     id: "recommendations",
-    title: "AI Recommendations",
-    description: "Get personalized travel suggestions",
+    title: "Nature Expeditions",
+    description: "AI-curated wilderness experiences",
     icon: Compass,
-    gradient: "gradient-primary",
-    stats: "50+ destinations"
+    gradient: "gradient-forest",
+    stats: "100+ locations"
   },
   {
     id: "map",
-    title: "Interactive Map", 
-    description: "Explore locations visually",
+    title: "Wildlife Map", 
+    description: "Track habitats & trails",
     icon: MapPin,
-    gradient: "gradient-ocean",
-    stats: "Live tracking"
+    gradient: "gradient-nature",
+    stats: "Live updates"
   },
   {
     id: "chat",
-    title: "AI Chat Assistant",
-    description: "24/7 multilingual support",
+    title: "Wilderness Guide AI",
+    description: "Expert nature & wildlife advice",
     icon: MessageSquare,
-    gradient: "gradient-sunset",
-    stats: "4 languages"
+    gradient: "gradient-safari",
+    stats: "24/7 support"
   },
   {
     id: "payments",
-    title: "Secure Payments",
-    description: "Blockchain-powered transactions",
+    title: "Premium Bookings",
+    description: "Secure safari & tour payments",
     icon: CreditCard,
-    gradient: "gradient-mountain",
-    stats: "Safe & fast"
+    gradient: "gradient-earth",
+    stats: "Instant confirm"
   }
 ];
 
 const travelAlerts = [
   {
     type: "weather",
-    message: "Perfect weather expected in Jharkhand hills this weekend",
+    message: "🌤️ Ideal wildlife spotting conditions in Bandhavgarh National Park this week",
     severity: "info"
   },
   {
     type: "promotion",
-    message: "Special 20% off on weekend getaway packages",
+    message: "🐅 Premium Tiger Safari - Early bird discount 25% off for October bookings",
     severity: "success"
   },
   {
     type: "update",
-    message: "New AI recommendations algorithm now live",
+    message: "🌿 New eco-lodges opened in Jim Corbett sanctuary with zero-carbon footprint",
     severity: "info"
   }
 ];
@@ -76,33 +76,41 @@ export function Dashboard({ onNavigate }: DashboardProps) {
   return (
     <div className="space-y-6">
       {/* Welcome Section with Hero Image */}
-      <div className="relative gradient-hero rounded-xl p-8 text-center overflow-hidden">
+      <div className="relative gradient-wildlife rounded-2xl p-10 text-center overflow-hidden shadow-premium">
         <div 
-          className="absolute inset-0 opacity-40 bg-cover bg-center rounded-xl"
+          className="absolute inset-0 opacity-50 bg-cover bg-center rounded-2xl"
           style={{ backgroundImage: `url(${tourismHero})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-accent/30 rounded-xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-transparent to-accent/40 rounded-2xl" />
         <div className="relative z-10">
-          <h1 className="text-4xl font-bold text-white drop-shadow-lg mb-3">
-            Welcome to TourismAI
+          <div className="mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 gradient-forest rounded-2xl shadow-premium mb-4">
+              <Compass className="h-8 w-8 text-white" />
+            </div>
+          </div>
+          <h1 className="text-5xl font-bold text-white drop-shadow-2xl mb-4 tracking-tight">
+            Welcome to VanYatra
           </h1>
-          <p className="text-lg text-white/90 drop-shadow-md mb-6">
-            Your intelligent travel companion for discovering amazing destinations
+          <p className="text-xl text-white drop-shadow-lg mb-8 max-w-2xl mx-auto font-medium">
+            Your premium gateway to pristine nature, untamed wildlife, and unforgettable wilderness adventures
           </p>
-          <div className="flex flex-wrap gap-2 justify-center mb-4">
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
-              AI-Powered Recommendations
+          <div className="flex flex-wrap gap-3 justify-center mb-6">
+            <Badge className="bg-white/25 text-white border-white/40 backdrop-blur-md px-4 py-2 text-sm font-medium shadow-lg">
+              🌿 Nature Expeditions
             </Badge>
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
-              Smart Itinerary Planning
+            <Badge className="bg-white/25 text-white border-white/40 backdrop-blur-md px-4 py-2 text-sm font-medium shadow-lg">
+              🐅 Wildlife Safaris
             </Badge>
-            <Badge className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
-              Multilingual Support
+            <Badge className="bg-white/25 text-white border-white/40 backdrop-blur-md px-4 py-2 text-sm font-medium shadow-lg">
+              🏔️ Adventure Trails
+            </Badge>
+            <Badge className="bg-white/25 text-white border-white/40 backdrop-blur-md px-4 py-2 text-sm font-medium shadow-lg">
+              🌄 Eco Tourism
             </Badge>
           </div>
-          <Badge className="flex items-center space-x-2 w-fit mx-auto bg-green-500/20 text-white border-green-400/30 backdrop-blur-sm">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span>AI Online & Ready</span>
+          <Badge className="inline-flex items-center space-x-2 bg-emerald-500/30 text-white border-emerald-300/50 backdrop-blur-md px-4 py-2 shadow-lg">
+            <div className="w-2.5 h-2.5 bg-emerald-300 rounded-full animate-pulse shadow-lg"></div>
+            <span className="font-semibold">AI Wilderness Guide Active</span>
           </Badge>
         </div>
       </div>
@@ -114,26 +122,28 @@ export function Dashboard({ onNavigate }: DashboardProps) {
           return (
             <Card 
               key={card.id}
-              className="relative overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-hover hover:scale-105 group border-2 border-transparent hover:border-primary/20"
+              className="relative overflow-hidden cursor-pointer transition-all duration-500 hover:shadow-premium hover:scale-105 group border-2 border-transparent hover:border-primary/30 shadow-card"
               onClick={() => onNavigate(card.id)}
             >
-              <div className={cn("absolute inset-0 opacity-15", card.gradient)} />
+              <div className={cn("absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity", card.gradient)} />
               <CardHeader className="relative">
                 <div className="flex items-center justify-between">
-                  <Icon className="h-8 w-8 text-primary" />
-                  <Badge variant="outline" className="text-xs">
+                  <div className="p-2 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+                    <Icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <Badge variant="outline" className="text-xs font-semibold border-primary/30 bg-background/80 backdrop-blur-sm">
                     {card.stats}
                   </Badge>
                 </div>
-                <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                <CardTitle className="text-lg group-hover:text-primary transition-colors mt-4">
                   {card.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative">
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                   {card.description}
                 </p>
-                <Button size="sm" className="w-full">
+                <Button size="sm" className="w-full shadow-md group-hover:shadow-lg transition-all">
                   Explore Now
                 </Button>
               </CardContent>
@@ -144,11 +154,11 @@ export function Dashboard({ onNavigate }: DashboardProps) {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Travel Alerts */}
-        <Card className="lg:col-span-2">
+        <Card className="lg:col-span-2 shadow-card">
           <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <AlertCircle className="h-5 w-5 text-accent" />
-              <span>Travel Alerts & News</span>
+            <CardTitle className="flex items-center space-x-2 text-gradient-primary">
+              <AlertCircle className="h-6 w-6 text-primary" />
+              <span>Wildlife & Nature Updates</span>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
@@ -175,32 +185,32 @@ export function Dashboard({ onNavigate }: DashboardProps) {
         </Card>
 
         {/* Quick Stats */}
-        <Card>
+        <Card className="shadow-card gradient-earth/5">
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
-              <TrendingUp className="h-5 w-5 text-primary" />
-              <span>Your Activity</span>
+              <TrendingUp className="h-6 w-6 text-primary" />
+              <span>Your Journey</span>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">Destinations Explored</span>
-              <span className="font-semibold">12</span>
+            <div className="flex items-center justify-between p-3 bg-secondary/30 rounded-lg">
+              <span className="text-sm text-muted-foreground font-medium">🌲 Wilderness Explored</span>
+              <span className="font-bold text-primary text-lg">18</span>
             </div>
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">AI Conversations</span>
-              <span className="font-semibold">24</span>
+            <div className="flex items-center justify-between p-3 bg-secondary/30 rounded-lg">
+              <span className="text-sm text-muted-foreground font-medium">🐾 Wildlife Spotted</span>
+              <span className="font-bold text-primary text-lg">42</span>
             </div>
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">Itineraries Created</span>
-              <span className="font-semibold">3</span>
+            <div className="flex items-center justify-between p-3 bg-secondary/30 rounded-lg">
+              <span className="text-sm text-muted-foreground font-medium">🗓️ Safaris Booked</span>
+              <span className="font-bold text-primary text-lg">5</span>
             </div>
             
             <div className="pt-4 border-t border-border">
-              <div className="flex items-center space-x-2">
-                <Users className="h-4 w-4 text-muted-foreground" />
-                <span className="text-xs text-muted-foreground">
-                  Join 10,000+ travelers using TourismAI
+              <div className="flex items-center space-x-2 p-3 bg-gradient-nature/10 rounded-lg">
+                <Users className="h-5 w-5 text-primary" />
+                <span className="text-xs text-foreground font-medium">
+                  Join 25,000+ nature enthusiasts on VanYatra
                 </span>
               </div>
             </div>

@@ -48,11 +48,11 @@ export function TourismLayout({ children, activeTab, onTabChange }: TourismLayou
                 {sidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               </Button>
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                  <Compass className="h-5 w-5 text-white" />
+                <div className="w-10 h-10 gradient-forest rounded-xl flex items-center justify-center shadow-premium">
+                  <Compass className="h-6 w-6 text-white" />
                 </div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  TourismAI
+                <h1 className="text-2xl font-bold text-gradient-safari">
+                  VanYatra
                 </h1>
               </div>
             </div>
@@ -101,9 +101,9 @@ export function TourismLayout({ children, activeTab, onTabChange }: TourismLayou
             </nav>
             
             <div className="p-4 border-t border-border">
-              <div className="bg-secondary/50 rounded-lg p-3">
-                <p className="text-xs text-muted-foreground">
-                  🌟 Discover amazing destinations with AI-powered recommendations
+              <div className="gradient-nature rounded-lg p-3 shadow-card">
+                <p className="text-xs text-white font-medium">
+                  🌿 Explore pristine nature & wildlife with AI
                 </p>
               </div>
             </div>

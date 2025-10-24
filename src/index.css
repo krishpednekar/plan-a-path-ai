@@ -2,109 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TourismAI Design System - Tourism-inspired colors and gradients */
+/* VanYatra Design System - Premium Nature & Wildlife Theme */
 
 @layer base {
   :root {
     /* Core Brand Colors */
-    --background: 210 20% 98%;
-    --foreground: 210 20% 15%;
+    --background: 40 25% 98%;
+    --foreground: 140 30% 12%;
     
-    /* Tourism Brand Palette */
-    --ocean-blue: 210 85% 45%;
-    --sunset-orange: 25 95% 60%;
-    --forest-green: 120 40% 35%;
-    --mountain-purple: 270 50% 40%;
-    --sky-light: 200 60% 85%;
-    --earth-brown: 30 35% 25%;
+    /* Nature & Wildlife Palette */
+    --forest-deep: 140 60% 25%;
+    --forest-light: 140 45% 45%;
+    --earth-brown: 30 45% 35%;
+    --safari-gold: 45 95% 55%;
+    --meadow-green: 110 50% 50%;
+    --wildlife-amber: 38 100% 50%;
+    --stone-gray: 30 10% 45%;
+    --moss-green: 120 30% 40%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 15%;
+    --card-foreground: 140 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 15%;
+    --popover-foreground: 140 30% 12%;
 
-    --primary: 210 85% 45%;
+    --primary: 140 60% 28%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 60% 85%;
-    --secondary-foreground: 210 20% 15%;
+    --secondary: 40 35% 90%;
+    --secondary-foreground: 140 30% 12%;
 
-    --muted: 210 20% 93%;
-    --muted-foreground: 210 15% 55%;
+    --muted: 40 20% 94%;
+    --muted-foreground: 140 15% 45%;
 
-    --accent: 25 95% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 95% 55%;
+    --accent-foreground: 140 30% 12%;
 
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 88%;
-    --input: 210 25% 88%;
-    --ring: 210 85% 45%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 140 60% 28%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
     
-    /* Tourism Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 85% 55%) 0%, hsl(270 60% 50%) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 65%) 0%, hsl(350 85% 60%) 100%);
-    --gradient-nature: linear-gradient(135deg, hsl(120 50% 45%) 0%, hsl(200 70% 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 85% 55%) 0%, hsl(25 95% 65%) 30%, hsl(350 85% 60%) 70%, hsl(270 60% 50%) 100%);
-    --gradient-ocean: linear-gradient(135deg, hsl(200 85% 60%) 0%, hsl(210 90% 45%) 100%);
-    --gradient-mountain: linear-gradient(135deg, hsl(270 60% 50%) 0%, hsl(280 70% 60%) 100%);
+    /* Premium Nature Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(140 60% 28%) 0%, hsl(110 50% 40%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(45 95% 55%) 0%, hsl(30 85% 50%) 100%);
+    --gradient-nature: linear-gradient(135deg, hsl(140 60% 28%) 0%, hsl(110 50% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(140 60% 25%) 0%, hsl(45 95% 55%) 50%, hsl(30 85% 50%) 100%);
+    --gradient-forest: linear-gradient(135deg, hsl(140 60% 20%) 0%, hsl(140 45% 45%) 100%);
+    --gradient-safari: linear-gradient(135deg, hsl(38 100% 50%) 0%, hsl(45 95% 60%) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(30 45% 35%) 0%, hsl(40 40% 50%) 100%);
+    --gradient-wildlife: linear-gradient(135deg, hsl(110 50% 50%) 0%, hsl(45 95% 55%) 50%, hsl(30 45% 35%) 100%);
     
     /* Sidebar */
-    --sidebar-background: 210 20% 96%;
-    --sidebar-foreground: 210 20% 15%;
-    --sidebar-primary: 210 85% 45%;
+    --sidebar-background: 40 25% 97%;
+    --sidebar-foreground: 140 30% 12%;
+    --sidebar-primary: 140 60% 28%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 200 60% 85%;
-    --sidebar-accent-foreground: 210 20% 15%;
-    --sidebar-border: 210 25% 88%;
-    --sidebar-ring: 210 85% 45%;
+    --sidebar-accent: 40 35% 90%;
+    --sidebar-accent-foreground: 140 30% 12%;
+    --sidebar-border: 40 20% 88%;
+    --sidebar-ring: 140 60% 28%;
     
-    /* Shadows */
-    --shadow-card: 0 4px 20px hsl(210 85% 45% / 0.1);
-    --shadow-hover: 0 8px 30px hsl(210 85% 45% / 0.15);
+    /* Premium Shadows & Effects */
+    --shadow-card: 0 4px 24px hsl(140 60% 28% / 0.08);
+    --shadow-hover: 0 12px 40px hsl(140 60% 28% / 0.12);
+    --shadow-premium: 0 20px 60px hsl(140 60% 28% / 0.15);
+    --glow-primary: 0 0 30px hsl(140 60% 28% / 0.3);
+    --glow-accent: 0 0 30px hsl(45 95% 55% / 0.4);
   }
 
   .dark {
-    --background: 210 20% 8%;
+    --background: 140 25% 8%;
     --foreground: 0 0% 95%;
     
-    --card: 210 20% 12%;
+    --card: 140 20% 12%;
     --card-foreground: 0 0% 95%;
     
-    --popover: 210 20% 12%;
+    --popover: 140 20% 12%;
     --popover-foreground: 0 0% 95%;
     
-    --primary: 210 85% 55%;
+    --primary: 140 55% 45%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 210 20% 18%;
+    --secondary: 140 15% 18%;
     --secondary-foreground: 0 0% 95%;
     
-    --muted: 210 20% 18%;
-    --muted-foreground: 210 15% 65%;
+    --muted: 140 15% 18%;
+    --muted-foreground: 140 10% 65%;
     
-    --accent: 25 95% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 95% 60%;
+    --accent-foreground: 140 30% 12%;
     
     --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 210 20% 18%;
-    --input: 210 20% 18%;
-    --ring: 210 85% 55%;
+    --border: 140 15% 20%;
+    --input: 140 15% 20%;
+    --ring: 140 55% 45%;
     
-    --sidebar-background: 210 20% 10%;
+    --sidebar-background: 140 20% 10%;
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 210 85% 55%;
+    --sidebar-primary: 140 55% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 20% 15%;
+    --sidebar-accent: 140 15% 15%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 210 20% 18%;
-    --sidebar-ring: 210 85% 55%;
+    --sidebar-border: 140 15% 18%;
+    --sidebar-ring: 140 55% 45%;
+    
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 12px 40px hsl(0 0% 0% / 0.4);
+    --shadow-premium: 0 20px 60px hsl(0 0% 0% / 0.5);
   }
 }
 
@@ -118,7 +129,7 @@
   }
 }
 
-/* Custom utility classes */
+/* Premium Nature Utility Classes */
 @layer utilities {
   .gradient-primary {
     background: var(--gradient-primary);
@@ -136,12 +147,20 @@
     background: var(--gradient-hero);
   }
   
-  .gradient-ocean {
-    background: var(--gradient-ocean);
+  .gradient-forest {
+    background: var(--gradient-forest);
   }
   
-  .gradient-mountain {
-    background: var(--gradient-mountain);
+  .gradient-safari {
+    background: var(--gradient-safari);
+  }
+  
+  .gradient-earth {
+    background: var(--gradient-earth);
+  }
+  
+  .gradient-wildlife {
+    background: var(--gradient-wildlife);
   }
   
   .shadow-card {
@@ -150,5 +169,31 @@
   
   .shadow-hover {
     box-shadow: var(--shadow-hover);
+  }
+  
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-safari {
+    background: var(--gradient-safari);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
